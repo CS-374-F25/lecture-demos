@@ -134,4 +134,16 @@ int main() {
 	int my_array[10] = {4, -1, 12, 3, 4, 5, 6, 7};
 
 	int zeros[100] = {0};
+
+	// This is a buffer over-read
+	int some_int_var = my_array[10];
+
+	// This is a buffer overflow
+	my_array[100] = 5;
+
+	// Buffer over-reads and overflows invoke undefined behavior in C.
+	
+	// Arbitrary code execution (ACE) exploit
+	//
+	// Valgrind is a dynamic analysis tool.
 }
