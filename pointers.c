@@ -10,6 +10,11 @@ struct person {
 	int age;
 };
 
+int* return5() {
+	int z = 5;
+	return &z;
+}
+
 int main() {
 	int x = 5;
 
@@ -38,4 +43,13 @@ int main() {
 
 	// In C, NULL is typically a macro for 0
 	int* my_ptr = NULL;
+
+	// Last thing about pointers: Dangling pointers. A pointer that USED
+	// to point to something, but now that thing is gone.
+	int* some_ptr = return5();
+	// some_ptr is a dangling pointer
+	
+	// Dereferencing a dangling pointer is known as a use-after-free error.
+	// This invokes undefined behavior.
+	printf("%d\n", *some_ptr);
 }
