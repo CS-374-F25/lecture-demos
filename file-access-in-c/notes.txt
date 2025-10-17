@@ -1,0 +1,16 @@
+When you open a file in a program, a file descriptor is created to represent
+the program's handle on that file.
+
+File descriptors are actually just integers.
+
+File descriptor 0 represents standard input.
+File descriptor 1 represents standard output.
+File descriptor 2 represents standard error.
+
+If the process proceeds to open more files using fopen() or open(), those
+opened files also get file descriptors counting up from 3
+
+Every process has its own mappings from file descriptors to files.
+
+Every process has a file descriptor table. This table maps file descriptors to
+files for each process.
