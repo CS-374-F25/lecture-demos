@@ -1,0 +1,3 @@
+Parallelization: Two things running at the actual same time
+
+Concurrency: Two things being managed at the same time
