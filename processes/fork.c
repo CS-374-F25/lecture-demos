@@ -4,8 +4,6 @@
 int main() {
 	printf("Hello, World!\n");
 
-	while(1) fork();
-
 	// The parent process will create, or fork, a child process
 	pid_t fork_result = fork();
 
